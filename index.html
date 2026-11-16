@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POD Business Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Print-on-Demand Tracker</h1>
+      <p>Manage your merchandise business</p>
+    </header>
+
+    <main>
+      <section class="summary">
+        <div class="card">
+          <h3>Monthly Goal</h3>
+          <h2>$100.00</h2>
+        </div>
+
+        <div class="card">
+          <h3>Total Earnings</h3>
+          <h2 id="totalEarnings">$0.00</h2>
+        </div>
+
+        <div class="card">
+          <h3>Total Sales</h3>
+          <h2 id="totalSales">0</h2>
+        </div>
+
+        <div class="card">
+          <h3>Designs Published</h3>
+          <h2 id="totalDesigns">0</h2>
+        </div>
+      </section>
+
+      <section class="progress-section">
+        <h3>Monthly Goal Progress</h3>
+        <div class="progress-bar">
+          <div id="progress"></div>
+        </div>
+        <p id="progressText">0% completed</p>
+      </section>
+
+      <section class="tracker">
+        <h2>Business Records</h2>
+
+        <form id="trackerForm">
+          <input
+            type="text"
+            id="collection"
+            placeholder="Collection Name"
+            required
+          />
+
+          <input
+            type="number"
+            id="designs"
+            placeholder="Designs Published"
+            min="0"
+            required
+          />
+
+          <input
+            type="number"
+            id="views"
+            placeholder="Product Views"
+            min="0"
+            required
+          />
+
+          <input
+            type="number"
+            id="sales"
+            placeholder="Sales"
+            min="0"
+            required
+          />
+
+          <input
+            type="number"
+            id="earnings"
+            placeholder="Earnings ($)"
+            min="0"
+            step="0.01"
+            required
+          />
+
+          <button type="submit">Add Record</button>
+        </form>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Collection</th>
+                <th>Designs</th>
+                <th>Views</th>
+                <th>Sales</th>
+                <th>Earnings</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="recordsTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Print-on-Demand Business Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

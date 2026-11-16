@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7f5;
+    color: #26352d;
+}
+
+header {
+    background: #176b45;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card, .progress-section, .tracker {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #718078;
+}
+
+.card h2 {
+    margin-top: 12px;
+    color: #176b45;
+}
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 13px;
+    background: #e4eae6;
+    border-radius: 20px;
+    margin: 15px 0 8px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #20a464;
+    transition: width 0.3s;
+}
+
+.tracker {
+    margin-top: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input, button {
+    padding: 12px;
+    border: 1px solid #dce4df;
+    border-radius: 6px;
+    min-width: 0;
+}
+
+button {
+    background: #176b45;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #105335;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 13px;
+    text-align: center;
+    border-bottom: 1px solid #e8eeea;
+}
+
+th {
+    background: #edf4ef;
+}
+
+.delete-btn {
+    background: #d94343;
+    padding: 8px 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #718078;
+}
+
+@media (max-width: 800px) {
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+}
